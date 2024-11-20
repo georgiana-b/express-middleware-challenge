@@ -36,7 +36,7 @@ router.get('/process', (req, res) => {
 });
 
 // Route to view saved orders
-router.get('/orders', (req, res) => {
+router.get('/', (req, res) => {
   Order.findAll()
     .then((orders) => res.status(200).json(orders))
     .catch((error) => {
